@@ -4,7 +4,7 @@ interface Props {
     child: String,
 }
 
-const Material = () => {
+const Material:React.FunctionComponent<Props> = () => {
     return (
         <div>
             <h1>Material Button</h1>

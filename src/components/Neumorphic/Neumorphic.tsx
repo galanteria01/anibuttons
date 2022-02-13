@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Neumorphic = () => {
+interface Props {
+    child: string
+}
+
+const Neumorphic: React.FunctionComponent<Props> = () => {
     return (
         <div>
-            
+
         </div>
     )
 }

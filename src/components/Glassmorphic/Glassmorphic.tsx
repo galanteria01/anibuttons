@@ -1,6 +1,10 @@
 import React from 'react'
 
-const Glassmorphic = () => {
+interface Props {
+    child: string
+}
+
+const Glassmorphic: React.FunctionComponent<Props> = () => {
     return (
         <div>
             

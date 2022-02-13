@@ -1,6 +1,10 @@
 import React from 'react'
 
-const Animated = () => {
+interface Props {
+    child: String,
+}
+
+const Animated:React.FunctionComponent<Props> = () => {
     return (
         <div>
             

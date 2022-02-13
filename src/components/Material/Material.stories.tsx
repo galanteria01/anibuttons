@@ -7,7 +7,7 @@ export default {
 }
 
 export const Default = () => (
-    <Material />
+    <Material child="Hello" />
 )
 
 Default.args = {}
