@@ -6,8 +6,34 @@ export default {
     component: Material,
 }
 
-export const Default = () => (
-    <Material child="Hello" />
+export const Default = (args: any) => (
+    <Material
+        children="Hello"
+    />
+)
+
+const Primary = (args: any) => (
+    <Material
+        type="primary"
+        children="Hello"
+    />
+)
+
+const Secondary = (args: any) => (
+    <Material
+        type="secondary"
+        children="Hello"
+    />
 )
 
 Default.args = {}
+
+export const isPrimary = Primary.bind({})
+Primary.args = {
+    type: 'primary',
+}
+
+export const isSecondary = Secondary.bind({})
+Secondary.args = {
+    type: 'secondary',
+}

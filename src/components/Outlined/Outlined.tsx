@@ -10,6 +10,7 @@ interface Props extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
   outlineColor?: string
   outlineRadius?: number
+  style?: any
 }
 
 const Outlined: React.FunctionComponent<Props> = (props: Props) => {
@@ -17,10 +18,12 @@ const Outlined: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <button
       disabled={props.disabled}
+      className={classes.join(' ')}
       style={{
         textAlign: props.textAlign,
         fontSize: props.size === 'small' ? '0.8rem' : props.size === 'medium' ? '1rem' : '1.2rem',
         outlineColor: props.outlineColor,
+        ...props.style
       }}
     >
       {props.children}
