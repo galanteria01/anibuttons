@@ -1,1 +1,1 @@
-export {default as Neumorphic} from './Neumorphic'
+export { default as Neumorphic } from './Neumorphic'

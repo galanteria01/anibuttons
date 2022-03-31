@@ -4,10 +4,10 @@ interface Props {
     child: String,
 }
 
-const Animated:React.FunctionComponent<Props> = () => {
+const Animated: React.FunctionComponent<Props> = () => {
     return (
         <div>
-            
+
         </div>
     )
 }

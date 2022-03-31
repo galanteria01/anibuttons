@@ -5,7 +5,7 @@ interface Props {
 }
 
 
-const MaterialYou:React.FunctionComponent<Props> = () => {
+const MaterialYou: React.FunctionComponent<Props> = () => {
   return (
     <div>MaterialYou</div>
   )

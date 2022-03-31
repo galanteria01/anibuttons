@@ -7,7 +7,7 @@ interface Props {
 const Glassmorphic: React.FunctionComponent<Props> = () => {
     return (
         <div>
-            
+
         </div>
     )
 }

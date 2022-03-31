@@ -1,1 +1,1 @@
-export {default as Glassmorphic} from './Glassmorphic'
+export { default as Glassmorphic } from './Glassmorphic'
