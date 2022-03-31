@@ -1,19 +1,9 @@
 import React from 'react'
 import OutlinedStyles from './Outlined.module.css'
+import { OutlinedProps } from './OutlinedProps'
 
-interface Props extends React.HTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
-  disabled?: boolean
-  textAlign?: 'left' | 'center' | 'right'
-  size?: 'small' | 'medium' | 'large'
-  className?: string
-  outlineColor?: string
-  outlineRadius?: number
-  style?: any
-}
 
-const Outlined: React.FunctionComponent<Props> = (props: Props) => {
+const Outlined: React.FunctionComponent<OutlinedProps> = (props: OutlinedProps) => {
   let classes = [OutlinedStyles['ani-outlined']]
   return (
     <button
