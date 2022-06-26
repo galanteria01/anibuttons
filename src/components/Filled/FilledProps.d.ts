@@ -1,13 +1,13 @@
 import React from "react"
 
-export interface AnimatedProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface FilledProps extends React.HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
   onClick?: React.MouseEventHandler<HTMLButtonElement>
   disabled?: boolean
   textAlign?: 'left' | 'center' | 'right'
   size?: 'small' | 'medium' | 'large'
   className?: string
-  outlineColor?: string
-  outlineRadius?: number
+  backgroundColor?: any;
+  color: any;
   style?: any
 }
