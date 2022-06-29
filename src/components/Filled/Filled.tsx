@@ -1,27 +1,35 @@
 import React from 'react'
-import FilledStyles from './Filled.module.css'
-import { FilledProps } from './FilledProps'
+import styled from 'styled-components'
+import FilledProps from './FilledProps'
 
-
-const Filled: React.FunctionComponent<FilledProps> = (props: FilledProps) => {
-  let classes = [FilledStyles['ani-filled']]
-  if (props.size) {
-    classes.push(FilledStyles[`ani-filled-${props.size}`])
+const FilledButton = styled.button<FilledProps>`
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: ${props => props.size === 'small' ? '0.8rem' : props.size === 'medium' ? '1rem' : '1.2rem'};
+  color: ${props => props.color || '#fff'};
+  background-color: ${props => props.backgroundColor || '#A020F0'};
+  padding: ${props => props.size === "small" ? "7px 25px 8px" : (props.size === "medium" ? "9px 30px 11px" : "14px 30px 16px")};
+  &:hover {
+    background-color: ${props => props.hoverColor || "#A020F0"};
   }
+  &.active {
+    background-color: ${props => props.activeColor || "#A020F0"};
+  }
+  &:disabled {
+    background-color: ${props => props.disabledColor || "#A020F0"};
+  }
+`
+const Filled: React.FunctionComponent<FilledProps> = ({ className, onClick, children, disabled, ...props }: FilledProps) => {
   return (
-    <button
-      disabled={props.disabled}
-      className={classes.join(' ')}
-      style={{
-        textAlign: props.textAlign,
-        fontSize: props.size === 'small' ? '0.8rem' : props.size === 'medium' ? '1rem' : '1.2rem',
-        color: props.color,
-        backgroundColor: props.backgroundColor,
-        ...props.style
-      }}
+    <FilledButton
+      className={className}
+      disabled={disabled}
+      onClick={onClick}
+      {...props}
     >
-      {props.children}
-    </button>
+      {children}
+    </FilledButton>
   )
 }
 
